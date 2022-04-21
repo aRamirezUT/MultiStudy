@@ -12,6 +12,7 @@ Compiler compliance level 1.8
 JRE 1.8.0
 
 <h2>Installation and How to Run</h2>
+
 1. Go to repository and click on "Code"
 2. Copy HTTPS link
 3. Once in Eclipse, click on "File" and then "Import"
