@@ -7,12 +7,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class CalculatorController {
     @FXML
-    private AnchorPane calculatorPane;
+    private BorderPane calculatorPane;
     @FXML
     void Home(ActionEvent event) throws IOException {
     	calculatorPane = FXMLLoader.load(getClass().getResource("/application/view/Main.fxml"));// going to Main Pane

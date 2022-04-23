@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PlannerController">
+   <children>
+      <Button layoutX="534.0" layoutY="32.0" mnemonicParsing="false" onAction="#homeHandle" text="Home" />
+      <DatePicker fx:id="datePicker" layoutX="46.0" layoutY="32.0" onAction="#datePicked" prefHeight="25.0" prefWidth="131.0" promptText="4/23/2022" />
+      <TextField fx:id="selectedDay" layoutX="393.0" layoutY="127.0" text="Selected Days Tasks">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <ListView fx:id="taskList" layoutX="46.0" layoutY="177.0" prefHeight="200.0" prefWidth="502.0" />
+      <Button layoutX="298.0" layoutY="127.0" mnemonicParsing="false" onAction="#addTasks" prefHeight="25.0" prefWidth="86.0" text="Add Task" />
+      <TextField fx:id="taskName" layoutX="46.0" layoutY="80.0" prefHeight="25.0" prefWidth="149.0" text="Task Name" />
+      <TextField fx:id="taskDetails" layoutX="46.0" layoutY="127.0" prefHeight="25.0" prefWidth="240.0" text="Task Details" />
+      <Button layoutX="300.0" layoutY="80.0" mnemonicParsing="false" onAction="#removeTask" prefHeight="25.0" prefWidth="86.0" text="Remove Task" />
+   </children>
 </AnchorPane>
-
