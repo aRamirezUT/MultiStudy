@@ -1,13 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalculatorController">
+<AnchorPane fx:id="calculatorPane" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalculatorController">
    <children>
-      <Button layoutX="489.0" layoutY="50.0" mnemonicParsing="false" onAction="#Home" text="Home" />
+      <Label alignment="CENTER" layoutX="163.0" layoutY="25.0" prefHeight="40.0" prefWidth="275.0" text="Scientific Calculator">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numberOutput" alignment="CENTER_RIGHT" layoutX="76.0" layoutY="97.0" prefHeight="30.0" prefWidth="450.0" />
+      <HBox layoutX="76.0" layoutY="145.0" prefHeight="300.0" prefWidth="450.0" spacing="20.0">
+         <children>
+            <VBox prefHeight="300.0" prefWidth="75.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#unaryOperate" prefHeight="35.0" prefWidth="75.0" text="Sin" />
+                  <Button mnemonicParsing="false" onAction="#unaryOperate" prefHeight="35.0" prefWidth="75.0" text="sqrt" />
+                  <Button mnemonicParsing="false" onAction="#binaryOperate" prefHeight="35.0" prefWidth="75.0" text="x^y" />
+                  <Button mnemonicParsing="false" onAction="#unaryOperate" prefHeight="35.0" prefWidth="75.0" text="x^2" />
+                  <Button mnemonicParsing="false" onAction="#unaryOperate" prefHeight="35.0" prefWidth="75.0" text="x^3" />
+                  <Button mnemonicParsing="false" onAction="#unaryOperate" prefHeight="35.0" prefWidth="75.0" text="e^x" />
+               </children>
+            </VBox>
+            <VBox prefHeight="300.0" prefWidth="75.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#unaryOperate" prefHeight="35.0" prefWidth="75.0" text="Cos" />
+                  <Button mnemonicParsing="false" onAction="#unaryOperate" prefHeight="35.0" prefWidth="75.0" text="x!" />
+                  <Button mnemonicParsing="false" onAction="#numberInput" prefHeight="35.0" prefWidth="75.0" text="7" />
+                  <Button mnemonicParsing="false" onAction="#numberInput" prefHeight="35.0" prefWidth="75.0" text="4" />
+                  <Button mnemonicParsing="false" onAction="#numberInput" prefHeight="35.0" prefWidth="75.0" text="1" />
+                  <Button mnemonicParsing="false" onAction="#switchSign" prefHeight="35.0" prefWidth="75.0" text="+/-" />
+               </children>
+            </VBox>
+            <VBox prefHeight="300.0" prefWidth="75.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#unaryOperate" prefHeight="35.0" prefWidth="75.0" text="Tan" />
+                  <Button mnemonicParsing="false" onAction="#unaryOperate" prefHeight="35.0" prefWidth="75.0" text="Log" />
+                  <Button mnemonicParsing="false" onAction="#numberInput" prefHeight="35.0" prefWidth="75.0" text="8" />
+                  <Button mnemonicParsing="false" onAction="#numberInput" prefHeight="35.0" prefWidth="75.0" text="5" />
+                  <Button mnemonicParsing="false" onAction="#numberInput" prefHeight="35.0" prefWidth="75.0" text="2" />
+                  <Button mnemonicParsing="false" onAction="#numberInput" prefHeight="35.0" prefWidth="75.0" text="0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="300.0" prefWidth="75.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#binaryOperate" prefHeight="35.0" prefWidth="75.0" text="mod" />
+                  <Button mnemonicParsing="false" onAction="#unaryOperate" prefHeight="35.0" prefWidth="75.0" text="ln" />
+                  <Button mnemonicParsing="false" onAction="#numberInput" prefHeight="35.0" prefWidth="75.0" text="9" />
+                  <Button mnemonicParsing="false" onAction="#numberInput" prefHeight="35.0" prefWidth="75.0" text="6" />
+                  <Button mnemonicParsing="false" onAction="#numberInput" prefHeight="35.0" prefWidth="75.0" text="3" />
+                  <Button mnemonicParsing="false" onAction="#inputDecimal" prefHeight="35.0" prefWidth="75.0" text="." />
+               </children>
+            </VBox>
+            <VBox prefHeight="300.0" prefWidth="75.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#numberClear" prefHeight="35.0" prefWidth="75.0" text="C" />
+                  <Button mnemonicParsing="false" onAction="#binaryOperate" prefHeight="35.0" prefWidth="75.0" text="/" />
+                  <Button mnemonicParsing="false" onAction="#binaryOperate" prefHeight="35.0" prefWidth="75.0" text="*" />
+                  <Button mnemonicParsing="false" onAction="#binaryOperate" prefHeight="35.0" prefWidth="75.0" text="-" />
+                  <Button mnemonicParsing="false" onAction="#binaryOperate" prefHeight="35.0" prefWidth="75.0" text="+" />
+                  <Button mnemonicParsing="false" onAction="#binaryOperate" prefHeight="35.0" prefWidth="75.0" text="=" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="526.0" layoutY="25.0" mnemonicParsing="false" onAction="#Home" text="Home" />
    </children>
 </AnchorPane>
