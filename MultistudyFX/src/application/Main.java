@@ -11,9 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-//        	DatePicker datePicker = new DatePicker();
             BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("/application/view/Main.fxml"));
-//          root.getChildren().add(datePicker);
             Scene scene = new Scene(root,400,400);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
             primaryStage.setScene(scene);
