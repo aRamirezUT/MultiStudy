@@ -1,5 +1,8 @@
+/**
+ * @author tnu755
+ * PlannerModel
+ */
 package application.Model;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -7,12 +10,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Date;
-
+/**
+ * PlannerModel is the model class for PlannerController to call upon following VMC Guidelines
+ *
+ */
 public class PlannerModel {
+	/**
+	 * method to return the day of week from calendar input
+	 * @param date date passed from user selection
+	 * @return the day of week to be returned ex. MONDAY
+	 */
 	public static String setDay(String date) {
 		int year = Integer.parseInt(date.substring(0, 4));
 		int month = Integer.parseInt(date.substring(5, 7));
@@ -23,7 +31,12 @@ public class PlannerModel {
         System.out.println("Day of week in text: "+dayOfWeek.toString());
 		return dayOfWeek.toString();
 	}
-	//Reader Logic
+	/**
+	 * printDay reads the "taskData.txt" file and returns a string of what is to be read from the user selected date
+	 * @param date date to be used
+	 * @param string file name
+	 * @return string of tasks to be returned
+	 */
 	public static String printDay(String date, String string) {
 		int year = Integer.parseInt(date.substring(0, 4));
 		int month = Integer.parseInt(date.substring(5, 7));
@@ -64,7 +77,14 @@ public class PlannerModel {
 	return str;
 }
 
-	//Writer Logic
+	/**
+	 * addEvent writes to "taskData.txt" based off user input task and time,
+	 * and then calls printDay to refresh the task view for the newly added task
+	 * @param date date passed from user 
+	 * @param string file name
+	 * @param time time the task should be done at
+	 * @param details details of the task
+	 */
 	public static void addEvent(String date, String string, String time, String details) {
 		int year = Integer.parseInt(date.substring(0, 4));
 		int month = Integer.parseInt(date.substring(5, 7));
@@ -124,7 +144,15 @@ public class PlannerModel {
 	
 		}
 	}
-	
+	/**
+	 * deleteEvent deletes and event from "taskData.txt" by reading over the given file and writing to a temporary file,
+	 * before then deleting temp file and renaming it to the original file name
+	 * @param event task in formatted string to be deleted
+	 * @param date date on which the task will be deleted
+	 * @param string file name
+	 * @throws FileNotFoundException 
+	 * @throws IOException
+	 */
 	public static void deleteEvent(String event, String date, String string) throws FileNotFoundException, IOException {
 	//	 now write newLines to file
 		int year = Integer.parseInt(date.substring(0, 4));
@@ -152,7 +180,12 @@ public class PlannerModel {
 		inputFile.delete();
 		boolean successful = tempFile.renameTo(inputFile);
 	}
-	
+	/**
+	 * scheduleEvent is a method addEvent calls upon to format the passed time and task details to be used in writing to "taskData.txt"
+	 * @param time time from user
+	 * @param details details of task from user
+	 * @return return formatted version of the task event ex. '00:00 do stuff'
+	 */
 	public static String scheduleEvent(String time, String details) {
 		String eventTime[] = time.split(":", 2);
 		String eventDescription = details;

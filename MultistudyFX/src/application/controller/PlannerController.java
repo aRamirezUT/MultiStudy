@@ -1,5 +1,6 @@
 /**
  * @author tnu755
+ * Planner Controller, self explanitory
  */
 package application.controller;
 
@@ -32,7 +33,11 @@ public class PlannerController {
     private BorderPane plannerPane;  
     @FXML
     private TextField time;
-    
+    /**
+     * Takes user back to main page
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void homeHandle(ActionEvent event) throws IOException {
     	plannerPane = FXMLLoader.load(getClass().getResource("/application/view/Main.fxml"));// going to Main Pane
@@ -41,7 +46,12 @@ public class PlannerController {
     	window.setScene(scene);
     	window.show();
     }
-    
+    /**
+     * displays the day of week based off what the user selects in the calendar
+     * appends current tasks for the user picked day
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void datePicked(ActionEvent event) throws IOException{
         //add action listener to the date picker
@@ -51,23 +61,31 @@ public class PlannerController {
         textArea.appendText(PlannerModel.printDay(datePicker.getValue().toString(),"taskData.txt"));
         });
     }
-    
+    /**
+     * adds a task to the day the user picked from calendar,
+     * refreshes task screen to display new task added
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void addTasks(ActionEvent event) throws IOException {
-//    	textArea.clear();
     	PlannerModel.addEvent(datePicker.getValue().toString(), "taskData.txt", time.getText().toString(), taskDetails.getText().toString());
     	textArea.clear();
     	textArea.appendText(PlannerModel.printDay(datePicker.getValue().toString(),"taskData.txt"));
-//    	System.out.println(CalendarLogic.printDay(datePicker.getValue().toString(),"taskData.txt"));
     	taskDetails.clear();
     	taskDetails.setText("Task Details");
     	time.clear();
     	time.setText("Enter Time 00:00");
     }
-    
+    /**
+     * removes a task from the user picked day,
+     * refreshes task screen to display tasks after deletion
+     * @param event
+     * @throws FileNotFoundException
+     * @throws IOException
+     */
     @FXML
     void removeTask(ActionEvent event) throws FileNotFoundException, IOException {
-//    	System.out.println("event to remove " + time.getText().toString()+ " " + taskDetails.getText().toString());
     	textArea.clear();
     	PlannerModel.deleteEvent(time.getText().toString()+ " " + taskDetails.getText().toString(),datePicker.getValue().toString(), "taskData.txt");
     	textArea.appendText(PlannerModel.printDay(datePicker.getValue().toString(),"taskData.txt"));

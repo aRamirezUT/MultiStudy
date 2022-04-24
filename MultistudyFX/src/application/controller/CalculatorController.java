@@ -1,6 +1,8 @@
 package application.controller;
 
 import java.io.IOException;
+
+import application.Model.CalculatorModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +11,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 
 public class CalculatorController {
@@ -25,12 +29,12 @@ public class CalculatorController {
 	private boolean isDecimal = false;
 
 	@FXML
-    private AnchorPane calculatorPane;
+    private BorderPane calculatorPane;
 
 	@FXML
 	private TextField numberOutput;
 
-	private Model model = new Model();
+	private CalculatorModel model = new CalculatorModel();
 	
 	@FXML
 	void Home(ActionEvent event) throws IOException {
