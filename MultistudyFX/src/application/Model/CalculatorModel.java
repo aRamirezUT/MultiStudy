@@ -59,7 +59,7 @@ public class CalculatorModel {
 		case "x!":
 			int fact = 1;
 			for (int i = 1; i <= num1; ++i)
-				fact = fact * 1;
+				fact = fact * i;
 			return fact;
 		default:
 			break;
