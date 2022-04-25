@@ -28,5 +28,4 @@ JRE 1.8.0
 - MD Hamja
 - Aren Ramirez
 - Michael Obi
-- Seth Rodriguez 
 - Reem Salem
