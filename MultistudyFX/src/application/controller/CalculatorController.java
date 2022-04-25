@@ -11,7 +11,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 
@@ -29,7 +28,7 @@ public class CalculatorController {
 	private boolean isDecimal = false;
 
 	@FXML
-    private BorderPane calculatorPane;
+    	private AnchorPane calculatorPane;
 
 	@FXML
 	private TextField numberOutput;
