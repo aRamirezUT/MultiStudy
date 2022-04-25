@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="561.0" prefWidth="597.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.controller.TimerController">
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="94.0" prefWidth="121.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.TimerController">
    <children>
-      <Button layoutX="499.0" layoutY="46.0" mnemonicParsing="false" onAction="#homeHandle" text="Home" />
+      <Circle fill="#dae5ee" layoutX="400.0" layoutY="300.0" radius="271.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="280.0" layoutY="438.0" mnemonicParsing="false" onAction="#start" prefHeight="44.0" prefWidth="107.0" text="START" />
+      <Button layoutX="413.0" layoutY="438.0" mnemonicParsing="false" onAction="#reset" prefHeight="44.0" prefWidth="107.0" text="RESET" />
+      <Button layoutX="258.0" layoutY="357.0" mnemonicParsing="false" onAction="#hu" prefHeight="44.0" prefWidth="33.0" text="↑" />
+      <Button layoutX="291.0" layoutY="357.0" mnemonicParsing="false" onAction="#hd" prefHeight="44.0" prefWidth="33.0" text="↓" />
+      <Button layoutX="404.0" layoutY="357.0" mnemonicParsing="false" onAction="#md" prefHeight="44.0" prefWidth="33.0" text="↓" />
+      <Button layoutX="371.0" layoutY="357.0" mnemonicParsing="false" onAction="#mu" prefHeight="44.0" prefWidth="33.0" text="↑" />
+      <Button layoutX="509.0" layoutY="357.0" mnemonicParsing="false" onAction="#sd" prefHeight="44.0" prefWidth="33.0" text="↓" />
+      <Button layoutX="476.0" layoutY="357.0" mnemonicParsing="false" onAction="#su" prefHeight="44.0" prefWidth="33.0" text="↑" />
+      <Button fx:id="timer" alignment="CENTER" contentDisplay="CENTER" layoutX="196.0" layoutY="178.0" mnemonicParsing="false" onAction="#pause" prefHeight="135.0" prefWidth="409.0" text="00 : 00 : 00" textAlignment="CENTER">
+         <font>
+            <Font size="60.0" />
+         </font>
+      </Button>
+      <Button layoutX="705.0" layoutY="17.0" mnemonicParsing="false" onAction="#homeHandle" prefHeight="30.0" prefWidth="85.0" text="Main Menu" />
    </children>
 </AnchorPane>
