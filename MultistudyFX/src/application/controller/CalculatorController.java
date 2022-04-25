@@ -29,7 +29,7 @@ public class CalculatorController {
 	private boolean isDecimal = false;
 
 	@FXML
-    	private AnchorPane calculatorPane;
+    	private BorderPane calculatorPane;
 
 	@FXML
 	private TextField numberOutput;
