@@ -1,5 +1,5 @@
 /**
-     * MD Amir Hamja
+     * MD Amir Hamj
      * Sqv036
      * UTSA CS 3443 
      * spring 2022
@@ -9,7 +9,7 @@
 
 package notepad.app;
 
-import java.awt.EventQueue
+import java.awt.EventQueu
 import static javax.swing.JOptionPane.showMessageDialog;
 
 import javax.swing.DefaultListModel;
