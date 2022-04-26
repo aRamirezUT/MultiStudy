@@ -9,7 +9,7 @@
 
 package notepad.app;
 
-import java.awt.EventQueue;
+import java.awt.EventQueue
 import static javax.swing.JOptionPane.showMessageDialog;
 
 import javax.swing.DefaultListModel;
@@ -35,7 +35,7 @@ import javax.swing.JTextArea;
 
 
 public class Main {
-
+//Main
 	private JFrame frmNotepad;
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");  
 		LocalDateTime now = LocalDateTime.now(); 
