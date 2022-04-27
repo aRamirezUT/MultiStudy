@@ -59,9 +59,6 @@ public class NotepadController implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		System.out.print(savedNotes);
 		date.setText(dtf.format(now));
-		
-		
 	}
 }
