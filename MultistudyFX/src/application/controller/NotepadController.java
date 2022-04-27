@@ -1,4 +1,4 @@
-package application;
+package application.controller;
 
 import java.awt.TextField;
 import java.net.URL;
@@ -18,7 +18,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 
-public class SampleController implements Initializable {
+public class NotepadController implements Initializable {
 	ObservableList<String> savedNotes = FXCollections.observableArrayList();
 	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");  
 	LocalDateTime now = LocalDateTime.now(); 

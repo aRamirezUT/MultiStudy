@@ -27,8 +27,6 @@ public class PlannerModel {
 		int day = Integer.parseInt(date.substring(8, 10));
         LocalDate localDate = LocalDate.of(year, month, day);
         java.time.DayOfWeek dayOfWeek = localDate.getDayOfWeek();
-        System.out.println("Day of week in number: "+dayOfWeek.getValue());
-        System.out.println("Day of week in text: "+dayOfWeek.toString());
 		return dayOfWeek.toString();
 	}
 	/**
@@ -79,7 +77,6 @@ public class PlannerModel {
 
 	/**
 	 * addEvent writes to "taskData.txt" based off user input task and time,
-	 * and then calls printDay to refresh the task view for the newly added task
 	 * @param date date passed from user 
 	 * @param string file name
 	 * @param time time the task should be done at
@@ -133,7 +130,6 @@ public class PlannerModel {
 			writer.close();
 	
 			System.out.println();
-			printDay(date, string);
 		}
 	
 		catch (FileNotFoundException e) {
