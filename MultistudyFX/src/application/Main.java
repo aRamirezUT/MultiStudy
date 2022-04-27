@@ -1,5 +1,6 @@
 package application;
-	
+
+import application.Model.Timer;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -8,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
+	public static Timer t;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -23,6 +25,7 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
+		t = new Timer();
 		launch(args);
 	}
 }
