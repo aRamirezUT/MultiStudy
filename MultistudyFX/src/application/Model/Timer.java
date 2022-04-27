@@ -66,12 +66,23 @@ public class Timer implements Runnable {
 		}
 
 		if (secs == -1) {
-			mins--;
-			secs = 59;
+			if (mins > 0) {
+				mins--;
+				secs = 59;
+			} else {
+				secs = 0;
+
+			}
+
 		}
 		if (mins == -1) {
-			hours--;
-			mins = 59;
+			if (hours > 0) {
+				hours--;
+				mins = 59;
+			} else {
+				mins = 0;
+			}
+
 		}
 		if (hours == -1) {
 			hours = 0;
@@ -139,7 +150,7 @@ public class Timer implements Runnable {
 		while (true) {
 			try {
 				Thread.sleep(1000);
-				su();
+				sd();
 				check();
 				textUpdate();
 			} catch (InterruptedException e) {
