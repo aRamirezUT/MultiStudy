@@ -29,3 +29,8 @@ JRE 1.8.0
 - Aren Ramirez
 - Michael Obi
 - Reem Salem
+
+<h2>Issues/Bugs</h2>
+
+- Unable to delete notes on Notepad
+- Timer will sometimes count down by 2s when refreshing Timer multiple times
