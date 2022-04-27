@@ -34,7 +34,6 @@ public class TimerController {
 		super();
 		System.out.println("start");
 		t = Main.t;
-
 	}
 
 	@FXML
