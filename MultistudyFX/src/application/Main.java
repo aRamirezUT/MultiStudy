@@ -17,7 +17,7 @@ public class Main extends Application {
 			Scene scene = new Scene(root,1000,1000);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("NOTEPAD");
+			primaryStage.setTitle("Multistudy");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
